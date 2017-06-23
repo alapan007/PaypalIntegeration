@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script src="https://js.braintreegateway.com/web/3.18.0/js/client.min.js"></script>
+    <script src="https://js.braintreegateway.com/web/3.18.0/js/paypal-checkout.min.js"></script>
+    <script src="https://www.paypalobjects.com/api/checkout.js"></script>
+</head>
+<body>
+
+
+
+<div id="paypal-button"></div>
+
+
+<script >
+        paypal.Button.render({
+
+            env:  'sandbox',
+
+            commit: true, // Show a 'Pay Now' button
+
+            payment: function () {
+                // Set up the payment here
+            },
+
+            onAuthorize: function (data, actions) {
+                // Execute the payment here
+            }
+
+        }, '#paypal-button');
+</script>
+
+
+</body>
